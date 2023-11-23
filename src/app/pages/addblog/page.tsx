@@ -130,14 +130,18 @@ export default function AddBlog() {
       paragraphs: updatedParagraphs,
     });
   }
+
   const sortParagraphs = (a: ParagraphData, b: ParagraphData) => {
     if (a.position === b.position) {
-      return b.createdAt! - a.createdAt!;
-    }
-    return a.position.localeCompare(b.position);
-  }
+      const aTimestamp = a.createdAt !== null ? Number(a.createdAt) : 0;
+      const bTimestamp = b.createdAt !== null ? Number(b.createdAt) : 0;
   
-
+      return bTimestamp - aTimestamp;
+    }
+  
+    return a.position.localeCompare(b.position);
+  };
+  
   const uploadImage = async (image: File) => {
     try {
       const formData = new FormData();
