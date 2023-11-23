@@ -1,3 +1,4 @@
+"use client"
 import Link from 'next/link';
 import React,{useState, useEffect} from 'react'
 import { BiPlus, BiSolidUserCircle, BiSearchAlt } from "react-icons/bi";
