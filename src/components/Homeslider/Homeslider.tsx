@@ -1,49 +1,3 @@
-// "use client"
-// import React from 'react'
-// import { useRef, useState } from 'react';
-// // Import Swiper React components
-// import { Swiper, SwiperSlide } from 'swiper/react';
-// // Import Swiper styles
-// import 'swiper/css';
-// import 'swiper/css/pagination';
-// import 'swiper/css/navigation';
-// // import required modules
-// import { Pagination, Navigation } from 'swiper/modules';
-// import Image from 'next/image';
-
-// import img1 from '@/assets/sliderTemp/img1.png'
-// import img2 from '@/assets/sliderTemp/img2.png'
-
-// const width = window.innerWidth;
-// const height = window.innerHeight;
-
-
-// function Homeslider() {
-//   return (
-//     <>
-//         <Swiper
-//             slidesPerView={1}
-//             spaceBetween={30}
-//             loop={true}
-//             pagination={{
-//             clickable: true,
-//             }}
-//             navigation={true}
-//             modules={[Pagination, Navigation]}
-//         >
-//             <SwiperSlide>
-//                 <Image src={img1} alt="" width={width} height={height / 2} style={{ objectFit: "cover"}} />  
-//             </SwiperSlide>
-//             <SwiperSlide>
-//                 <Image src={img2} alt="" width={width} height={height / 2} style={{ objectFit: "cover"}} />   
-//             </SwiperSlide>
-//         </Swiper>
-//     </>
-//   )
-// }
-
-// export default Homeslider
-
 import React, { useEffect, useState } from 'react'
 import img1 from '@/assets/sliderTemp/img1.png'
 import img2 from '@/assets/sliderTemp/img2.png'
@@ -77,8 +31,16 @@ interface Blog {
     category: string;
 }
 
-const width = window.innerWidth;
-const height = window.innerHeight;
+let width = 0;
+let height = 0;
+
+if (typeof window !== 'undefined') {
+    // Your window-dependent code here
+    width = window.innerWidth;
+    height = window.innerHeight;
+  }
+  
+
 
 
 const Homeslider = () => {
