@@ -304,7 +304,7 @@ export default function AddBlog() {
                     <h1>{paragraph.title}</h1>
                     <p>{paragraph.description}</p>
                   </div>
-                  {paragraph.image && <img src={URL.createObjectURL(paragraph.image)} alt={`Image for ${paragraph.title}`} />}
+                  {paragraph.image && <Image src={URL.createObjectURL(paragraph.image)} alt={`Image for ${paragraph.title}`} />}
                 </div>
               ))
             }

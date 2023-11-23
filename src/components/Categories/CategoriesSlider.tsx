@@ -143,7 +143,7 @@ function CategoriesSlider() {
         {
           categories.map((category) => {
             return (
-              <SwiperSlide>
+              <SwiperSlide key={category.name} >
                 <CategoryCard {...category} />  {/* using props like in react js  */}
               </SwiperSlide>
             )

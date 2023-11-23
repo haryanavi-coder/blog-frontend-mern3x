@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect, useState } from 'react'
 import img1 from '@/assets/sliderTemp/img1.png'
 import img2 from '@/assets/sliderTemp/img2.png'

@@ -130,7 +130,7 @@ const BlogsSlider = () => {
                 {
                     blogs.map((blog) => {
                         return (
-                            <SwiperSlide>
+                            <SwiperSlide key={blog._id} >
                                 <BlogCard {...blog} />
                             </SwiperSlide>
                         );
