@@ -110,7 +110,7 @@ const Homeslider = () => {
 
                 blogs.map((blog) => {
                     return (
-                        <SwiperSlide>
+                        <SwiperSlide key={blog._id} >
                             <Image src={blog.imageUrl} alt="" width={width} height={height / 2}
                                 style={{
                                     objectFit: "cover"
